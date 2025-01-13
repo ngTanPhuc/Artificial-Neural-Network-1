@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+        "label": "build",
+        "command": "g++",
+        "args": [
+            "-std=c++17",
+            "${file}",  // compile the currently open .cpp file
+            "-o",
+            "${fileDirname}/${fileBasenameNoExtension}.exe" // out put thr .exe file in the same directory as the source file
+        ],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Generated task by VS Code"
+        }
+    ]
+}
